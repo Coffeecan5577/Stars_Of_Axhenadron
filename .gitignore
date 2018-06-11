@@ -3,9 +3,9 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
-Assets/epyphany*
-Assets/SkyBox_Volume_2*
-Assets/StarSparrow*
+Assets/epyphany/*
+Assets/SkyBox_Volume_2/*
+Assets/StarSparrow/*
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
