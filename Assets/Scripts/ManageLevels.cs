@@ -5,16 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class ManageLevels : MonoBehaviour
 {
-	// Use this for initialization
-	void Start ()
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    // Use this for initialization
+    void Start ()
 	{
-		
-	}
+        Invoke("LoadLevel", 2.0f);
+    }
+
+    
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		Invoke("LoadLevel", 2.0f);
+	    
 	}
 
     private void LoadLevel()
