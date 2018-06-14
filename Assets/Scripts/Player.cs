@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
     [Tooltip("In ms^-1")][SerializeField] float XSpeed = 4f;
     [SerializeField] private float xClampValue = 4.75f;
+    [SerializeField] private float ySpeed = 4f;
+    [SerializeField] private float _yClampValue = 2.75f;
 
 	// Use this for initialization
 	void Start () {
@@ -17,14 +19,24 @@ public class Player : MonoBehaviour
 	void Update ()
 	{
 	    float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-	    float xOffset = XSpeed * xThrow * Time.deltaTime;
-        print(xOffset);
-	    float rawXPos = transform.localPosition.x + xOffset;
+	    float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+	    MoveHorizontally(xThrow);
+        MoveVertically(yThrow);
+	}
 
-	    float clampedXPos = Mathf.Clamp(rawXPos, -xClampValue, xClampValue);
-
+    private void MoveHorizontally(float xThrow)
+    {
+        float xOffset = XSpeed * xThrow * Time.deltaTime;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xClampValue, xClampValue);
         transform.localPosition = new Vector3(clampedXPos, transform.localPosition.y, transform.localPosition.z);
-
     }
 
+    private void MoveVertically(float yThrow)
+    {
+        float yOffset = ySpeed * yThrow * Time.deltaTime;
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -_yClampValue, _yClampValue);
+        transform.localPosition = new Vector3(transform.localPosition.x, clampedYPos, transform.localPosition.z);
+    }
 }
