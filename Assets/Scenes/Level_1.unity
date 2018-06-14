@@ -307,9 +307,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34e0c6698d866c4abb7c4e48e44cbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSpeed: 4
+  XSpeed: 9
   xClampValue: 4.5
-  ySpeed: 4
+  ySpeed: 8
   _yClampValue: 2.75
 --- !u!1 &356073608
 GameObject:
