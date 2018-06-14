@@ -11,20 +11,24 @@ public class Player : MonoBehaviour
     [SerializeField] private float _yClampValue = 2.75f;
 
     //Rotation variables for Euler angles
-    [SerializeField] private float _roll = 0f;
-    [SerializeField] private float _pitch = 0f;
-    [SerializeField] private float _yaw = 0f;
+    [SerializeField] private float _positionPitchFactor = -5f;
+    [SerializeField] private float _controlPitchFactor = -20f;
+    [SerializeField] private float _positionYawFactor = 5f;
+    [SerializeField] private float _controlRollFactor = -20f;
 
-	// Use this for initialization
-	void Start () {
+
+    private float xThrow, yThrow;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	    float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-	    float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+	    xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+	    yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 	    MoveHorizontally(xThrow);
         MoveVertically(yThrow);
 
@@ -49,6 +53,14 @@ public class Player : MonoBehaviour
 
     private void ProcessRotation()
     {
-        transform.localRotation = Quaternion.Euler(_pitch, _yaw, _roll);
+        float pitchDueToPosition = transform.localPosition.y * _positionPitchFactor;
+        float pitchDueToControlThrow = yThrow * _controlPitchFactor;
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
+
+        float yawDueToPosition = transform.localPosition.x * _positionYawFactor;
+
+        float rollDueToControlThrow = xThrow * _controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yawDueToPosition, rollDueToControlThrow);
     }
 }

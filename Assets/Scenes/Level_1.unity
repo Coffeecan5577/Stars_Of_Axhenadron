@@ -311,6 +311,10 @@ MonoBehaviour:
   xClampValue: 4.5
   ySpeed: 8
   _yClampValue: 2.75
+  _positionPitchFactor: -5
+  _controlPitchFactor: -20
+  _positionYawFactor: 5
+  _controlRollFactor: -20
 --- !u!1 &356073608
 GameObject:
   m_ObjectHideFlags: 0
