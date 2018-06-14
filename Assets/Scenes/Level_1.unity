@@ -308,9 +308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   XSpeed: 9
-  xClampValue: 4.5
+  xClampValue: 6.5
   ySpeed: 8
-  _yClampValue: 2.75
+  _yClampValue: 4
   _positionPitchFactor: -5
   _controlPitchFactor: -20
   _positionYawFactor: 5
@@ -634,7 +634,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 489094593}
-  lookAheadForTargetOffset: 5
+  lookAheadForTargetOffset: 4
   lookAheadForTargetFactor: 0.1
   lookAheadForSpeedOffset: 10
   lookAheadForSpeedFactor: 0.2
