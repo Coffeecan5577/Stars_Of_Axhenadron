@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 54721460878881236}
   - component: {fileID: 65973493924053802}
   - component: {fileID: 114587354431658384}
+  - component: {fileID: 114119552596076522}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Untagged
@@ -174,6 +175,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.8120186, y: 0.55145204, z: 3.2854}
   m_Center: {x: -0.000002026558, y: 0.023520276, z: 0.42130572}
+--- !u!114 &114119552596076522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672640670123856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7c9e3b0bae1694b8085a287e5cadb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114587354431658384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -185,13 +197,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34e0c6698d866c4abb7c4e48e44cbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XSpeed: 15
+  controlSpeed: 14
   xClampValue: 6.5
-  ySpeed: 11
   _yClampValue: 4
   _positionPitchFactor: -5
-  _controlPitchFactor: -20
   _positionYawFactor: 7
+  _controlPitchFactor: -20
   _controlRollFactor: -20
 --- !u!198 &198914673599275494
 ParticleSystem:

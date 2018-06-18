@@ -3,41 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In ms^-1")][SerializeField] float XSpeed = 4f;
+    [Header("General")]
+    [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 14f;
     [SerializeField] private float xClampValue = 4.75f;
-    [SerializeField] private float ySpeed = 4f;
     [SerializeField] private float _yClampValue = 2.75f;
 
     //Rotation variables for Euler angles
+    [Header("Screen-position Based")]
     [SerializeField] private float _positionPitchFactor = -5f;
-    [SerializeField] private float _controlPitchFactor = -20f;
     [SerializeField] private float _positionYawFactor = 5f;
+
+    [Header("Control-Throw Based")]
+    [SerializeField] private float _controlPitchFactor = -20f;
     [SerializeField] private float _controlRollFactor = -20f;
 
-
     private float xThrow, yThrow;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
+    private bool _isControlEnabled = true;
 	
 	// Update is called once per frame
 	void Update ()
 	{
-	    xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-	    yThrow = CrossPlatformInputManager.GetAxis("Vertical");
-	    MoveHorizontally(xThrow);
-        MoveVertically(yThrow);
+	    if (_isControlEnabled)
+	    {
+            xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+            yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+            MoveHorizontally(xThrow);
+            MoveVertically(yThrow);
 
-	    ProcessRotation();
+            ProcessRotation();
+        }
+	    
 	}
 
     private void MoveHorizontally(float xThrow)
     {
-        float xOffset = XSpeed * xThrow * Time.deltaTime;
+        float xOffset = controlSpeed * xThrow * Time.deltaTime;
         float rawXPos = transform.localPosition.x + xOffset;
         float clampedXPos = Mathf.Clamp(rawXPos, -xClampValue, xClampValue);
         transform.localPosition = new Vector3(clampedXPos, transform.localPosition.y, transform.localPosition.z);
@@ -45,7 +47,7 @@ public class Player : MonoBehaviour
 
     private void MoveVertically(float yThrow)
     {
-        float yOffset = ySpeed * yThrow * Time.deltaTime;
+        float yOffset = controlSpeed * yThrow * Time.deltaTime;
         float rawYPos = transform.localPosition.y + yOffset;
         float clampedYPos = Mathf.Clamp(rawYPos, -_yClampValue, _yClampValue);
         transform.localPosition = new Vector3(transform.localPosition.x, clampedYPos, transform.localPosition.z);
@@ -64,9 +66,10 @@ public class Player : MonoBehaviour
         transform.localRotation = Quaternion.Euler(pitch, yawDueToPosition, rollDueToControlThrow);
     }
 
-
-    void OnTriggerEnter(Collider collider)
+    void OnPlayerDeath() // Called by string reference.
     {
-        print("Triggered collision.");
+        _isControlEnabled = false;
+        print("Controls frozen.");
     }
+
 }
