@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private GameObject deathFX;
+    [SerializeField] private Transform parent;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -13,15 +16,14 @@ public class Enemy : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+        fx.transform.parent = parent;
         DestroyEnemy();
-       // Invoke("ResetExplosion", _explosionResetDelay);
     }
 
     private void DestroyEnemy()
     {
-        //_enemyDeathExplosion.SetActive(true);
         Destroy(gameObject);
-       
     }
 
     private void AddNonTriggerBoxCollider()
@@ -29,9 +31,4 @@ public class Enemy : MonoBehaviour
         Collider enemyCollider = gameObject.AddComponent<BoxCollider>();
         enemyCollider.isTrigger = false;
     }
-
-    //private void ResetExplosion()
-    //{
-    //    _enemyDeathExplosion.SetActive(false);
-    //}
 }
