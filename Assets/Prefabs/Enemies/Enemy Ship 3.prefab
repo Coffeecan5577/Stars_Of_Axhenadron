@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33627127521311492}
   - component: {fileID: 23146038117853134}
   - component: {fileID: 54051848709424378}
-  - component: {fileID: 65718639173354556}
   - component: {fileID: 114864557385008196}
   m_Layer: 0
   m_Name: Enemy Ship 3
@@ -100,18 +99,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65718639173354556
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1947112691150042}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5975957, y: 0.17319103, z: 0.6766178}
-  m_Center: {x: 1.3346082e-15, y: 0.000000014901163, z: 2.8282668e-17}
 --- !u!114 &114864557385008196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,4 +110,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyDeathExplosion: {fileID: 0}

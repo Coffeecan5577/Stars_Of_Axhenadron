@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33218527455790788}
   - component: {fileID: 23466268165702108}
   - component: {fileID: 54174512910469364}
-  - component: {fileID: 65487765146399920}
   - component: {fileID: 114546016266673030}
   m_Layer: 0
   m_Name: Enemy Ship 2
@@ -100,18 +99,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65487765146399920
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1992221800767510}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4862934, y: 0.12809299, z: 0.7095403}
-  m_Center: {x: -8.3266727e-16, y: -0.000000003725291, z: -0.00000002980233}
 --- !u!114 &114546016266673030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,4 +110,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyDeathExplosion: {fileID: 0}

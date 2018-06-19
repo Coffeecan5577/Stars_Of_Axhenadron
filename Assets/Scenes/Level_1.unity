@@ -210,6 +210,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114410107649002760, guid: 730c078894698bd459a8041da76b72c6, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 730c078894698bd459a8041da76b72c6, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &21090980 stripped
@@ -400,6 +401,22 @@ Transform:
   m_Father: {fileID: 489094592}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &395845788 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1986910862839440, guid: eb1548eac932cf549ae8897dbb2d47e1,
+    type: 2}
+  m_PrefabInternal: {fileID: 2090465954}
+--- !u!114 &395845789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 395845788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &489094591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4111,7 +4128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyDeathExplosion: {fileID: 1697258622}
 --- !u!1001 &818012075
 Prefab:
   m_ObjectHideFlags: 0
@@ -4156,7 +4172,9 @@ Prefab:
       propertyPath: _enemyDeathExplosion
       value: 
       objectReference: {fileID: 1697258622}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114546016266673030, guid: c53c1118661ee4144b737ebd605b452b, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: c53c1118661ee4144b737ebd605b452b, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &818012076 stripped
@@ -4275,6 +4293,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114410107649002760, guid: 730c078894698bd459a8041da76b72c6, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 730c078894698bd459a8041da76b72c6, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &847301301 stripped
@@ -7803,7 +7822,9 @@ Prefab:
       propertyPath: _enemyDeathExplosion
       value: 
       objectReference: {fileID: 1697258622}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114864557385008196, guid: a840cbfdf22c3d540acce29e314feed8, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: a840cbfdf22c3d540acce29e314feed8, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1087225715 stripped
@@ -7811,6 +7832,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4192164437250386, guid: a840cbfdf22c3d540acce29e314feed8,
     type: 2}
   m_PrefabInternal: {fileID: 1087225714}
+--- !u!1 &1106506848 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1992221800767510, guid: c53c1118661ee4144b737ebd605b452b,
+    type: 2}
+  m_PrefabInternal: {fileID: 818012075}
+--- !u!114 &1106506849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106506848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1218196822
 Prefab:
   m_ObjectHideFlags: 0
@@ -7855,7 +7892,9 @@ Prefab:
       propertyPath: _enemyDeathExplosion
       value: 
       objectReference: {fileID: 1697258622}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114410107649002760, guid: 730c078894698bd459a8041da76b72c6, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 730c078894698bd459a8041da76b72c6, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1218196823 stripped
@@ -8004,6 +8043,22 @@ Transform:
   m_Father: {fileID: 489094592}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1374742963 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1994778730759622, guid: 730c078894698bd459a8041da76b72c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1783403882}
+--- !u!114 &1374742964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1374742963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1442532908
 Prefab:
   m_ObjectHideFlags: 0
@@ -8067,6 +8122,38 @@ Transform:
   m_Father: {fileID: 1268977868}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1553694733 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1947112691150042, guid: a840cbfdf22c3d540acce29e314feed8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1087225714}
+--- !u!114 &1553694734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1553694733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1584700535 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1994778730759622, guid: 730c078894698bd459a8041da76b72c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1218196822}
+--- !u!114 &1584700536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1584700535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1589353182 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1994778730759622, guid: 730c078894698bd459a8041da76b72c6,
@@ -8083,7 +8170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1c15c62a9b60944a87fbbcea503163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyDeathExplosion: {fileID: 1697258622}
 --- !u!1 &1645022755
 GameObject:
   m_ObjectHideFlags: 0
@@ -11757,7 +11843,9 @@ Prefab:
       propertyPath: _enemyDeathExplosion
       value: 
       objectReference: {fileID: 1697258622}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114410107649002760, guid: 730c078894698bd459a8041da76b72c6, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 730c078894698bd459a8041da76b72c6, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1783403883 stripped
@@ -11902,7 +11990,9 @@ Prefab:
       propertyPath: _enemyDeathExplosion
       value: 
       objectReference: {fileID: 1697258622}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114155180805878500, guid: eb1548eac932cf549ae8897dbb2d47e1, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: eb1548eac932cf549ae8897dbb2d47e1, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2090465955 stripped
