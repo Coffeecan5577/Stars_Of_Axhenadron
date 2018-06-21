@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In ms^-1")][SerializeField] float controlSpeed = 14f;
     [SerializeField] private float xClampValue = 4.75f;
     [SerializeField] private float _yClampValue = 2.75f;
+    [SerializeField] private GameObject[] guns;
 
     //Rotation variables for Euler angles
     [Header("Screen-position Based")]
@@ -36,7 +37,8 @@ public class PlayerController : MonoBehaviour
             MoveVertically(yThrow);
 
             ProcessRotation();
-        }
+	        ProcessFiring();
+	    }
 	    
 	}
 
@@ -73,6 +75,34 @@ public class PlayerController : MonoBehaviour
     {
         _isControlEnabled = false;
         print("Controls frozen.");
+    }
+
+    void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }   
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (var gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (var gun in guns)
+        {
+            gun.SetActive(false);
+        }
     }
 
 }

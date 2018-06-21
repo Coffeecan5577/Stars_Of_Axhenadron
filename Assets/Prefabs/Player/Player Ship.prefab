@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198977557630312140}
   - component: {fileID: 199799282747789636}
   m_Layer: 0
-  m_Name: Bullets Right
+  m_Name: Gun Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 198914673599275494}
   - component: {fileID: 199256592046046914}
   m_Layer: 0
-  m_Name: Bullets Left
+  m_Name: Gun Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,6 +314,9 @@ MonoBehaviour:
   controlSpeed: 14
   xClampValue: 6.5
   _yClampValue: 4
+  guns:
+  - {fileID: 1823846935504174}
+  - {fileID: 1556378531529074}
   _positionPitchFactor: -5
   _positionYawFactor: 7
   _controlPitchFactor: -20
@@ -3739,7 +3742,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1286215541
+  randomSeed: -171936654
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7100,7 +7103,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1666134731
+  randomSeed: 1101553948
   InitialModule:
     serializedVersion: 3
     enabled: 1
